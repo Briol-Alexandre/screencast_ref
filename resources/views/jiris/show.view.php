@@ -7,6 +7,7 @@ use Carbon\Carbon;
 
 use Core\Database;
 
+
 ?>
 <!doctype html>
 <html lang="fr">
