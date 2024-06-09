@@ -3,9 +3,7 @@
 
 use Carbon\Carbon;
 
-/** @var stdClass $contact */
 
-use Core\Database;
 
 
 ?>
@@ -124,13 +122,9 @@ use Core\Database;
                 <?php
                 endif ?>
                 <div>
-                    <ol>
-                        <?php
-                        /** @var ARRAY $contacts */
-                        foreach ($contacts as $contact):?>
-                            <li><?= $contact->name?></li>
-                        <?php endforeach; ?>
-                    </ol>
+                    <?php
+                    /** @var ARRAY $contacts */
+                    component('forms.contacts.create', compact('contacts')); ?>
                 </div>
                 <div>
                     <a href="/jiri/edit?id=<?= $jiri->id ?>"
